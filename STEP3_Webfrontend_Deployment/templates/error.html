@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="card bg-danger text-light mb-3">
+        <div class="card-header">ERROR</div>
+        <div class="card-body">
+        <h5 class="card-title">{{ title }}</h5>
+        <p class="card-text">{{ message }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

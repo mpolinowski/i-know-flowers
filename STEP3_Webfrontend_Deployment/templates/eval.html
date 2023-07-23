@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="container">
+  <h3>ML with Scikit-Learn</h3>
+
+  
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="/sgd/">
+          <img src="/static/images/SGD_Model_eval_matrix.webp" class="img-fluid rounded-start"
+            alt="SGD Model Evaluation">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Stochastic Gradient Descent (<code>accuracy: 0.293860</code>)</h5>
+            <p class="card-text"><a href="https://scikit-learn.org/stable/modules/sgd.html" target="_blank">Stochastic Gradient Descent
+                (SGD)</a> is a simple yet very efficient approach to fitting linear classifiers and regressors under
+              convex loss functions such as (linear) Support Vector Machines and Logistic Regression. Even though SGD
+              has been around in the machine learning community for a long time, it has received a considerable amount
+              of attention just recently in the context of large-scale learning.</p>
+            <p class="card-text">SGD has been successfully applied to large-scale and sparse machine learning problems
+              often encountered in text classification and natural language processing. Given that the data is sparse,
+              the classifiers in this module easily scale to problems with more than 10^5 training examples and more
+              than 10^5 features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="/knn/">
+          <img src="/static/images/kNN_Model_eval_matrix.webp" class="img-fluid rounded-start"
+            alt="kNN Model Evaluation">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Nearest Neighbors (<code>accuracy: 0.367325</code>)</h5>
+            <p class="card-text"><a href="https://scikit-learn.org/stable/modules/neighbors.html" target="_blank">Nearest Neighbors
+                (kNN)</a> provides functionality for unsupervised and supervised neighbors-based learning methods.
+              Unsupervised nearest neighbors is the foundation of many other learning methods, notably manifold learning
+              and spectral clustering. Supervised neighbors-based learning comes in two flavors: classification for data
+              with discrete labels, and regression for data with continuous labels.</p>
+            <p class="card-text">The principle behind nearest neighbor methods is to find a predefined number of
+              training samples closest in distance to the new point, and predict the label from these. The number of
+              samples can be a user-defined constant (k-nearest neighbor learning), or vary based on the local density
+              of points (radius-based neighbor learning). The distance can, in general, be any metric measure: standard
+              Euclidean distance is the most common choice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+{% endblock  %}

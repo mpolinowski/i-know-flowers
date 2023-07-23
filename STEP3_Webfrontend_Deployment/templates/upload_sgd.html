@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+{% if extexception %}
+
+<div class="container mt-2">
+    <div class="card text-light bg-danger mb-3">
+        <div class="card-header">Upload Failed!</div>
+        <div class="card-body">
+          <h5 class="card-title">File Extension Not Allowed: {{ extension }}</h5>
+          <p class="card-text">Upload image files with <span class="text-info-emphasis">jpg</span>, <span class="text-info-emphasis">png</span> or <span class="text-info-emphasis">jpeg</span> extension</p>
+        </div>
+      </div>      
+</div>
+
+{% endif %}
+
+<div class="container mt-4">
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" id="upload-image" aria-current="true" href="#">SGD Classifier</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body p-0">
+            <h5 class="card-title pt-3">Upload image files with <code>jpg</code>, <code>png</code> or <code>jpeg</code> extension</h5>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <p>
+                    <input type="file" name="image" class="btn btn-light" requiered></input>
+                </p>
+                <p>
+                    <input type="submit" value="submit" class="btn btn-primary"></input>
+                </p>
+                <div class="card-footer">
+                    <p class="card-text">
+                        <small class="text-body-secondary">Available class labels are:
+                        <code>'Adenium', 'Alpinia_Purpurata', 'Alstroemeria_Aurantiaca', 'Anthurium_Andraeanum', 'Antirrhinum', 'Billbergia_Pyramidalis', 'Cattleya_Mossiae', 'Cirsium_Altissimum', 'Gazania_Rigens', 'Gerbera_Jamesonii', 'Gladiolus', 'Guzmania_Lingulata', 'Helianthus_Annuus', 'Iris_Pseudacorus', 'Leucanthemum', 'Narcissus_Pseudonarcissus', 'Nasturtium', 'Nerine_Sarniensis', 'Nymphaea_Tetragona', 'Oenothera_Suffrutescens', 'Paphiopedilum_Micranthum', 'Passiflora', 'Pelargonium_Inquinans', 'Petunia', 'Platycodon_Grandiflorus', 'Plumeria_Alba', 'Poinsettia', 'Primula_Vulgaris', 'Protea_Cynaroides', 'Rose', 'Rudbeckia', 'Strelitzia_Reginae', 'Tropaeolum_Majus', 'Tussilago', 'Viola_Tricolor', 'Coccinia_Grandis', 'Fritillaria_Meleagris', 'Crocus', 'Cyclamen', 'Dahlia_Bishop_of_Llandaff', 'Datura_Metel', 'Dianthus_Barbatus', 'Digitalis', 'Echinacea_Purpurea', 'Echinops_Bannaticus'</code></small>
+                    </p>
+                </div>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if fileupload %}
+
+<div class="container mt-2">
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ image }}" width="{{ width }}" height="335px" />
+            </div>
+            <div class="col-md-8 mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Top5 prediction results for the uploaded image:</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Label</th>
+                                <th scope="col">Confidence [%]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for name, score in data %}
+                            <tr>
+                                <th scope="row">{{loop.index}}</th>
+                                <td>{{name}}</td>
+                                <td>{{score}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}
