@@ -42,7 +42,7 @@ Select the model you want to use and upload a close-up photo of a flower contain
 The Stochastic Gradient Descent classifier was trained to an accuracy of `29.4%` over all 45 class labels:
 
 
-![SKLearn ML Modelserver]((https://github.com/mpolinowski/i-know-flowers/blob/master/STEP3_Webfrontend_Deployment/static/images/README_02.webp)
+![SKLearn ML Modelserver](https://github.com/mpolinowski/i-know-flowers/blob/master/STEP3_Webfrontend_Deployment/static/images/README_02.webp)
 
 
 ### kNN Classifier
@@ -50,7 +50,7 @@ The Stochastic Gradient Descent classifier was trained to an accuracy of `29.4%`
 The k-Nearest-Neighbors classifier was trained to an accuracy of `36.7%` over all 45 class labels. As seen from the confusion matrix the confusion is much more localized to a handful of classes and could probably be remedied by cleaning up / extending the dataset for those classes:
 
 
-![SKLearn ML Modelserver]((https://github.com/mpolinowski/i-know-flowers/blob/master/STEP3_Webfrontend_Deployment/static/images/README_03.webp)
+![SKLearn ML Modelserver](https://github.com/mpolinowski/i-know-flowers/blob/master/STEP3_Webfrontend_Deployment/static/images/README_03.webp)
 
 
 ### Dataset
@@ -58,7 +58,7 @@ The k-Nearest-Neighbors classifier was trained to an accuracy of `36.7%` over al
 Under the __About__ tab you see an overview of all included classes and samples of the images used to train the classifiers - all images used were taken from the [Flowers102 Dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html):
 
 
-![SKLearn ML Modelserver]((https://github.com/mpolinowski/i-know-flowers/blob/master/STEP3_Webfrontend_Deployment/static/images/README_04.webp)
+![SKLearn ML Modelserver](https://github.com/mpolinowski/i-know-flowers/blob/master/STEP3_Webfrontend_Deployment/static/images/README_04.webp)
 
 
 
